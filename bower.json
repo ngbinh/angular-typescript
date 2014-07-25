@@ -1,0 +1,29 @@
+{
+  "name": "angular-typescript",
+  "version": "0.0.1",
+  "authors": [
+    "Jonathan Yates <jonathantyates@gmail.com>"
+  ],
+  "description": "AngularJS TypeScript build environment",
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4",
+    "core-elements": "Polymer/core-elements#~0.3.4",
+    "paper-elements": "Polymer/paper-elements#~0.3.4"
+  },
+  "devDependencies": {
+    "angular": "~1.2.20"
+  }
+}

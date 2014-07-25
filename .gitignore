@@ -1,0 +1,14 @@
+.*
+!.bower.json
+!.bowerrc
+!.brackets.json
+!.gitignore
+!.jshintrc
+!README.md
+!LICENSE
+
+tmp
+bower_components
+node_modules
+build
+release

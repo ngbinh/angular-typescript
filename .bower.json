@@ -1,0 +1,21 @@
+{
+  "name": "angular-typescript",
+  "version": "0.0.1",
+  "authors": [
+    "Jonathan Yates <jonathantyates@gmail.com>"
+  ],
+  "description": "AngularJS TypeScript build environment",
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
