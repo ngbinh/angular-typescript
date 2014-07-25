@@ -81,7 +81,7 @@ gulp.task('typescript', () => {
 });
 
 gulp.task('templates', () => {
-  return gulp.src(['!./app/app.html', './app/**/*.html'])
+  return gulp.src(['!./app/index.html', './app/**/*.html'])
     .pipe(templateCache('app-templates.js', {module: require('./package').name}))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
 });
@@ -94,7 +94,7 @@ gulp.task('stylus', () => {
 });
 
 gulp.task('index', () => {
-  return gulp.src('./app/app.html')
+  return gulp.src('./app/index.html')
     .pipe(inject(gulp.src(['**/*.js', '**/*.css', '!bower_components/**/*'], {
       cwd: release ? RELEASE_DIR : BUILD_DIR, 
       read: false
@@ -112,7 +112,7 @@ gulp.task('watch', () => {
     gulp.start('typescript');
   });
   
-  watch({name: 'templates', emitOnGlob: false, glob: ['./app/**/*.html', '!./app/app.html']}, () => {
+  watch({name: 'templates', emitOnGlob: false, glob: ['./app/**/*.html', '!./app/index.html']}, () => {
     gulp.start('templates');
   });
   
@@ -120,7 +120,7 @@ gulp.task('watch', () => {
     gulp.start('stylus');
   });
   
-  watch({name: 'index', emitOnGlob: false, glob: './app/app.html'}, () => {
+  watch({name: 'index', emitOnGlob: false, glob: './app/index.html'}, () => {
     gulp.start('index');
   });
 });
