@@ -82,7 +82,10 @@ gulp.task('typescript', () => {
 
 gulp.task('templates', () => {
   return gulp.src(['!./app/index.html', './app/**/*.html'])
-    .pipe(templateCache('app-templates.js', {module: require('./package').name}))
+    .pipe(templateCache('app-templates.js', {
+      standalone: true, 
+      module: require('./package').name + '.templates'
+    }))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
 });
 
