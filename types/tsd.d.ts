@@ -6,3 +6,4 @@
 /// <reference path="angularjs/angular.d.ts" />
 /// <reference path="chalk/chalk.d.ts" />
 /// <reference path="lodash/lodash.d.ts" />
+/// <reference path="angular-ui/angular-ui-router.d.ts" />

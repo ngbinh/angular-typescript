@@ -15,19 +15,22 @@
       "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
     },
     "jquery/jquery.d.ts": {
-      "commit": "eed3db74e0d8255ab5b97c3155e08d521cef0950"
+      "commit": "2cea6c29c77cc78b150b3afa4d6f5aba65ee53a4"
     },
     "rimraf/rimraf.d.ts": {
       "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
     },
     "angularjs/angular.d.ts": {
-      "commit": "eed3db74e0d8255ab5b97c3155e08d521cef0950"
+      "commit": "2cea6c29c77cc78b150b3afa4d6f5aba65ee53a4"
     },
     "chalk/chalk.d.ts": {
       "commit": "eed3db74e0d8255ab5b97c3155e08d521cef0950"
     },
     "lodash/lodash.d.ts": {
       "commit": "006076798bb99261dfa4dc60dcb3f435db5035a6"
+    },
+    "angular-ui/angular-ui-router.d.ts": {
+      "commit": "2cea6c29c77cc78b150b3afa4d6f5aba65ee53a4"
     }
   }
 }
