@@ -1,6 +1,6 @@
 {
   "name": "angular-typescript",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "AngularJS TypeScript build environment",
   "main": "",
   "scripts": {
@@ -14,6 +14,7 @@
     "chalk": "^0.5.1",
     "gulp": "^3.8.6",
     "gulp-angular-templatecache": "^1.2.1",
+    "gulp-bump": "^0.1.10",
     "gulp-inject": "^1.0.0",
     "gulp-notify": "^1.4.0",
     "gulp-plumber": "^0.6.4",

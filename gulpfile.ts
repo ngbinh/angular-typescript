@@ -7,6 +7,7 @@
 var gulp: any = require('gulp');
 var util: any = require('gulp-util');
 var path: any = require('path');
+var bump: any = require('gulp-bump');
 var notify: any = require('gulp-notify');
 var pluralize: any = require('pluralize');
 var logSymbols: any = require('log-symbols');
@@ -64,6 +65,13 @@ gulp.task('release', (cb) => {
 /// build, serve, test, and release tasks.
 gulp.task('clean', rimraf.bind(null, release ? RELEASE_DIR : BUILD_DIR));
 
+gulp.task('bump', () => {
+  var type: string = util.env.major ? 'major' : util.env.minor ? 'minor' : 'patch';
+  return gulp.src(['./bower.json', './package.json'])
+    .pipe(bump({type: type}))
+    .pipe(gulp.dest('./'));
+});
+
 gulp.task('bower', () => {
   return gulp.src(bowerFiles({main: '**/*'}), {base: './bower_components'})
     .pipe(gulp.dest(path.join(release ? RELEASE_DIR : BUILD_DIR, 'bower_components')));
@@ -84,7 +92,7 @@ gulp.task('typescript', () => {
 gulp.task('templates', () => {
   return gulp.src(['!./app/index.html', './app/**/*.html'])
     .pipe(templateCache('app-templates.js', {
-      standalone: true, 
+      standalone: true,
       module: require('./package').name + '.templates'
     }))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
@@ -101,10 +109,10 @@ transform.html.css = (filepath) => '<link rel="stylesheet" href="' + filepath + 
 gulp.task('index', () => {
   return gulp.src('./app/index.html')
     .pipe(inject(gulp.src(['**/*.js', '**/*.css', '!bower_components/**/*'], {
-      cwd: release ? RELEASE_DIR : BUILD_DIR, 
+      cwd: release ? RELEASE_DIR : BUILD_DIR,
       read: false
     })))
-    .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR)); 
+    .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
 });
 
 gulp.task('webserver', () => {
@@ -116,15 +124,15 @@ gulp.task('watch', () => {
   watch({name: 'typescript', emitOnGlob: false, glob: './app/**/*.ts'}, () => {
     gulp.start('typescript');
   });
-  
+
   watch({name: 'templates', emitOnGlob: false, glob: ['./app/**/*.html', '!./app/index.html']}, () => {
     gulp.start('templates');
   });
-  
+
   watch({name: 'stylus', emitOnGlob: false, glob: './app/**/*.styl'}, () => {
     gulp.start('stylus');
   });
-  
+
   watch({name: 'index', emitOnGlob: false, glob: './app/index.html'}, () => {
     gulp.start('index');
   });
@@ -142,16 +150,16 @@ function reporter (errors: Array<any>) {
     util.log(chalk.bold.underline(fileName));
     lodash.forEach(errors, (err: any) => {
       util.log(
-        ' ', 
-        chalk.bold.gray('line ' + err.line), 
+        ' ',
+        chalk.bold.gray('line ' + err.line),
         chalk.bold.gray('col ' + err.column),
         chalk.blue(err.message)
       );
     });
     util.log();
     util.log(
-      chalk.red(logSymbols.error), 
-      chalk.bold.red(errors.length.toString()), 
+      chalk.red(logSymbols.error),
+      chalk.bold.red(errors.length.toString()),
       chalk.bold.red(pluralize('problem', errors.length))
     );
     util.log();
