@@ -18,6 +18,7 @@ var stylus: any = require('gulp-stylus');
 var rename: any = require('gulp-rename');
 var plumber: any = require('gulp-plumber');
 var inject: any = require('gulp-inject');
+var transform: any = require('gulp-inject/src/transform');
 var bowerFiles: any = require('main-bower-files');
 var templateCache: any = require('gulp-angular-templatecache');
 var webserver: any = require('gulp-webserver');
@@ -96,6 +97,7 @@ gulp.task('stylus', () => {
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR))
 });
 
+transform.html.css = (filepath) => '<link rel="stylesheet" href="' + filepath + '" shim-shadowdom>';
 gulp.task('index', () => {
   return gulp.src('./app/index.html')
     .pipe(inject(gulp.src(['**/*.js', '**/*.css', '!bower_components/**/*'], {
