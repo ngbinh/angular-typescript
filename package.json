@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "axis-css": "^0.1.8",
-    "browserify": "^4.2.3",
+    "browserify": "^5.9.1",
     "chalk": "^0.5.1",
     "gulp": "^3.8.6",
     "gulp-angular-templatecache": "^1.2.1",
@@ -18,13 +18,13 @@
     "gulp-notify": "^1.4.0",
     "gulp-plumber": "^0.6.4",
     "gulp-rename": "^1.2.0",
-    "gulp-stylus": "^1.1.0",
+    "gulp-stylus": "^1.3.0",
     "gulp-util": "^3.0.0",
     "gulp-watch": "^0.6.8",
     "gulp-webserver": "^0.4.0",
     "lodash": "^2.4.1",
     "log-symbols": "^1.0.0",
-    "main-bower-files": "^1.0.1",
+    "main-bower-files": "^1.0.2",
     "nib": "^1.0.3",
     "pluralize": "0.0.10",
     "q": "^1.0.1",
@@ -33,6 +33,6 @@
     "tsify": "^0.2.1",
     "typescript-require": "git://github.com/eknkc/typescript-require#67268a82f0f45cfddf96b0b554169f910f34861a",
     "vinyl-source-stream": "^0.1.1",
-    "watchify": "^0.10.2"
+    "watchify": "^1.0.1"
   }
 }
