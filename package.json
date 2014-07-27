@@ -1,6 +1,6 @@
 {
   "name": "angular-typescript",
-  "version": "0.1.3",
+  "version": "0.2.3",
   "description": "AngularJS TypeScript build environment",
   "main": "",
   "scripts": {
