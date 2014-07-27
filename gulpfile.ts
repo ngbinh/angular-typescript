@@ -70,12 +70,12 @@ gulp.task('bower', () => {
 });
 
 gulp.task('typescript', () => {
-  var bundle: BrowserifyObject = browserify('./app/app.ts');
+  var bundle: BrowserifyObject = browserify({debug: !release, entries: ['./app/app.ts']});
   typescriptErrors = [];
   bundle.on('error', onTypescriptError);
   return bundle
     .plugin('tsify', {noImplicitAny: true, target: 'ES5'})
-    .bundle({debug: !release})
+    .bundle()
     .pipe(sourceStream('app.ts'))
     .pipe(rename('app.js'))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
