@@ -66,9 +66,8 @@ gulp.task('release', (cb) => {
 gulp.task('clean', rimraf.bind(null, release ? RELEASE_DIR : BUILD_DIR));
 
 gulp.task('bump', () => {
-  var type: string = util.env.major ? 'major' : util.env.minor ? 'minor' : 'patch';
   return gulp.src(['./bower.json', './package.json'])
-    .pipe(bump({type: type}))
+    .pipe(bump({type: util.env.type}))
     .pipe(gulp.dest('./'));
 });
 
