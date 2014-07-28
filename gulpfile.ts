@@ -100,7 +100,10 @@ gulp.task('templates', () => {
 gulp.task('stylus', () => {
   return gulp.src('./app/app.styl')
     .pipe(plumber())
-    .pipe(stylus({use: [axis(), nib()]}))
+    .pipe(stylus({
+      use: [axis(), nib()],
+      import: process.cwd() + '/bower_components/material-colors/dist/colors.styl'
+    }))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR))
 });
 
