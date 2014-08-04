@@ -7,6 +7,7 @@
     "test": "gulp test"
   },
   "author": "Jonathan Yates <jonathantyates@gmail.com>",
+  "repository": "https://github.com/jonathantyates/angular-typescript",
   "license": "MIT",
   "devDependencies": {
     "axis-css": "^0.1.8",
@@ -18,6 +19,7 @@
     "gulp-inject": "^1.0.1",
     "gulp-notify": "^1.4.1",
     "gulp-plumber": "^0.6.4",
+    "gulp-protractor": "0.0.11",
     "gulp-rename": "^1.2.0",
     "gulp-stylus": "^1.3.0",
     "gulp-util": "^3.0.0",
@@ -28,6 +30,7 @@
     "main-bower-files": "^1.0.2",
     "nib": "^1.0.3",
     "pluralize": "0.0.10",
+    "protractor": "^1.0.0",
     "q": "^1.0.1",
     "rimraf": "^2.2.8",
     "run-sequence": "^0.3.6",
