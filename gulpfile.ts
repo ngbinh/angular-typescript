@@ -22,6 +22,7 @@ var inject: any = require('gulp-inject');
 var transform: any = require('gulp-inject/src/transform');
 var bowerFiles: any = require('main-bower-files');
 var templateCache: any = require('gulp-angular-templatecache');
+var protractor: any = require('gulp-protractor').protractor;
 var webserver: any = require('gulp-webserver');
 var watch: any = require('gulp-watch');
 import Q = require('q');
@@ -29,6 +30,8 @@ import chalk = require('chalk');
 import rimraf = require('rimraf');
 import lodash = require('lodash');
 import browserify = require('browserify');
+
+
 
 /// Environment flags
 /// -----------------
@@ -116,6 +119,10 @@ gulp.task('index', () => {
       read: false
     })))
     .pipe(gulp.dest(release ? RELEASE_DIR : BUILD_DIR));
+});
+
+gulp.task('protractor', () => {
+  return gulp.src('./app/**/*_test.js');
 });
 
 gulp.task('webserver', () => {

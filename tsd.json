@@ -11,35 +11,35 @@
     "browserify/browserify.d.ts": {
       "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
     },
-    "q/Q.d.ts": {
-      "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
-    },
-    "jquery/jquery.d.ts": {
-      "commit": "99805384e2702609d78632c7cc965f11b75081c9"
-    },
     "rimraf/rimraf.d.ts": {
       "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
-    },
-    "angularjs/angular.d.ts": {
-      "commit": "99805384e2702609d78632c7cc965f11b75081c9"
     },
     "chalk/chalk.d.ts": {
       "commit": "eed3db74e0d8255ab5b97c3155e08d521cef0950"
     },
+    "q/Q.d.ts": {
+      "commit": "5a8f9e312f3db37b8efc4dcdd1de204f60e67eb1"
+    },
     "lodash/lodash.d.ts": {
       "commit": "006076798bb99261dfa4dc60dcb3f435db5035a6"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "eee9894b92387eb1065258d398a1da7bd449cdaa"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "eee9894b92387eb1065258d398a1da7bd449cdaa"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "99805384e2702609d78632c7cc965f11b75081c9"
+    },
+    "restangular/restangular.d.ts": {
+      "commit": "eee9894b92387eb1065258d398a1da7bd449cdaa"
     },
     "angular-ui/angular-ui-router.d.ts": {
       "commit": "2cea6c29c77cc78b150b3afa4d6f5aba65ee53a4"
     },
     "angular-hotkeys/angular-hotkeys.d.ts": {
       "commit": "8ffa19aa17c21c4a257d50dab60e4f9e0a833a4e"
-    },
-    "angularjs/angular-mocks.d.ts": {
-      "commit": "99805384e2702609d78632c7cc965f11b75081c9"
-    },
-    "angularjs/angular-resource.d.ts": {
-      "commit": "99805384e2702609d78632c7cc965f11b75081c9"
     }
   }
 }

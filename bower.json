@@ -1,6 +1,6 @@
 {
   "name": "angular-typescript",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "authors": [
     "Jonathan Yates <jonathantyates@gmail.com>"
   ],
@@ -22,9 +22,9 @@
     "angular": "~1.2.21",
     "angular-animate": "~1.2.21",
     "angular-mocks": "~1.2.21",
-    "angular-resource": "~1.2.21",
     "angular-ui-router": "~0.2.10",
     "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.0",
+    "restangular": "~1.4.0",
     "ng-polymer-elements": "~0.1.0",
     "polymer": "Polymer/polymer#~0.3.4",
     "core-elements": "Polymer/core-elements#~0.3.4",
