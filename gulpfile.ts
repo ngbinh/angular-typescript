@@ -8,7 +8,7 @@ var gulp: any = require('gulp');
 var util: any = require('gulp-util');
 var path: any = require('path');
 var bump: any = require('gulp-bump');
-var notify: any = require('gulp-notify');
+var notifier: any = require('node-notifier');
 var pluralize: any = require('pluralize');
 var logSymbols: any = require('log-symbols');
 var runSequence: any = require('run-sequence');
@@ -154,6 +154,7 @@ gulp.task('watch', () => {
 /// Stylizes the error reports. Basically a clone of jshint-stylish.
 var debouncedReporter: Function = lodash.debounce(reporter, 0);
 function reporter (errors: Array<any>) {
+  var notification: any = new notifier();
   var groupedErrors: lodash.Dictionary<any> = lodash.groupBy(errors, 'fileName');
   lodash.forEach(groupedErrors, (errors: Array<any>, fileName: string) => {
     util.log();
@@ -165,6 +166,13 @@ function reporter (errors: Array<any>) {
         chalk.bold.gray('col ' + err.column),
         chalk.blue(err.message)
       );
+      notification.notify({
+        group: fileName,
+        title: fileName,
+        message: 'Line ' + err.line + ' Col ' + err.column + ' ' + err.message,
+        sound: 'Funk',
+        sender: 'com.apple.Terminal'
+      });
     });
     util.log();
     util.log(
